@@ -3,7 +3,7 @@ package Day01;
 import javax.persistence.*;
 import java.util.Date;
 
-
+//
 @Entity(name = "student")
 @Table(name = "studentlar",schema = "maktab")
 public class Student {
