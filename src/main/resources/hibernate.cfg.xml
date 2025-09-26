@@ -24,6 +24,6 @@
 
         <!-- 🎩 THE MAGIC SETTING - Auto create everything! -->
         <property name="hibernate.hbm2ddl.auto">create</property>
-        <mapping class="Day1.Student"/>
+        <mapping class="Day01.Student"/>
     </session-factory>
 </hibernate-configuration>
