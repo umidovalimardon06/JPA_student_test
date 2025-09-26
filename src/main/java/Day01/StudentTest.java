@@ -22,10 +22,13 @@ public class StudentTest {
             // Create student objects
             Student student1 = new Student("Ahmad", "Karimov", new Date(), Gender.MALE);
             Student student2 = new Student("Fatima", "Saidova", new Date(), Gender.FEMALE);
+            Student student3 = new Student("Alimardon", "Umidov", new Date(), Gender.MALE);
+
 
             // Save students
             session.save(student1);
             session.save(student2);
+            session.save(student3);
 
             // Commit transaction
             session.getTransaction().commit();
@@ -33,6 +36,7 @@ public class StudentTest {
             System.out.println("Students saved successfully!");
             System.out.println("Student 1: " + student1);
             System.out.println("Student 2: " + student2);
+            System.out.println("Student 3: " + student3);
 
         } catch (Exception e) {
             if (session.getTransaction() != null) {
