@@ -3,12 +3,13 @@ package Day01;
 import javax.persistence.*;
 import java.util.Date;
 
-//
+
 @Entity(name = "student")
-@Table(name = "studentlar",schema = "maktab")
+@Table(name = "studentlar",schema = "C##TOKYO")
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_seq")
+    @SequenceGenerator(name = "student_seq", sequenceName = "STUDENT_SEQ", allocationSize = 1)
     private Long id;
 
     @Column(name = "ism",length = 50,nullable = false,unique = false)
